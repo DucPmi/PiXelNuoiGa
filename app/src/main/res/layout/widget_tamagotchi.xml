@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_shell"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_shell_bg"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- Thanh tiêu đề: Tên thú + Cấp tiến hóa + XP -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_pet_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Gà Con • Cấp 1/5"
+            android:textColor="#1E293B"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_pet_xp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="XP 0/50"
+            android:textColor="#0F766E"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Màn hình Pixel Art chính (chạm để tương tác / vuốt ve) -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/widget_screen_frame"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/iv_pixel_scene"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:contentDescription="Pixel Pet Screen" />
+    </FrameLayout>
+
+    <!-- Dòng trạng thái + chỉ số nhanh -->
+    <TextView
+        android:id="@+id/tv_status_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:paddingTop="4dp"
+        android:paddingBottom="5dp"
+        android:text="Đói 80% • Vui 80% • Ngủ 80% • Sạch 100%"
+        android:textColor="#334155"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <!-- Hàng nút tương tác trực tiếp (6 nút Tamagotchi) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_feed"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/widget_btn_feed"
+            android:gravity="center"
+            android:text="🍗
+Ăn"
+            android:lineSpacingMultiplier="0.85"
+            android:textColor="#1E293B"
+            android:textSize="9.5sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_clean"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/widget_btn_clean"
+            android:gravity="center"
+            android:text="🧹
+Dọn"
+            android:lineSpacingMultiplier="0.85"
+            android:textColor="#1E293B"
+            android:textSize="9.5sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_play"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/widget_btn_play"
+            android:gravity="center"
+            android:text="🎾
+Chơi"
+            android:lineSpacingMultiplier="0.85"
+            android:textColor="#1E293B"
+            android:textSize="9.5sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_sleep"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/widget_btn_sleep"
+            android:gravity="center"
+            android:text="💤
+Ngủ"
+            android:lineSpacingMultiplier="0.85"
+            android:textColor="#1E293B"
+            android:textSize="9.5sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_heal"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/widget_btn_heal"
+            android:gravity="center"
+            android:text="💊
+Thuốc"
+            android:lineSpacingMultiplier="0.85"
+            android:textColor="#1E293B"
+            android:textSize="9.5sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_open"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_btn_open"
+            android:gravity="center"
+            android:text="🐾
+20 Thú"
+            android:lineSpacingMultiplier="0.85"
+            android:textColor="#1E293B"
+            android:textSize="9.5sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
