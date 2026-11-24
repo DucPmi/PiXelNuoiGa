@@ -106,9 +106,7 @@ class TamagotchiWidgetProvider : AppWidgetProvider() {
             views.setTextViewText(
                 R.id.btn_sleep,
                 if (state.isSleeping) "☀️
-Dậy" else "💤
-Ngủ"
-            )
+                if (state.isSleeping) "☀️\nDậy" else "💤\nNgủ"
 
             views.setOnClickPendingIntent(R.id.btn_feed, broadcastIntent(context, ACTION_FEED, 101))
             views.setOnClickPendingIntent(R.id.btn_clean, broadcastIntent(context, ACTION_CLEAN, 102))
