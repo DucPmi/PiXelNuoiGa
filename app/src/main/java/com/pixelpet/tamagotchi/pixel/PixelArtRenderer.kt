@@ -13,12 +13,12 @@ import com.pixelpet.tamagotchi.model.SilhouetteType
  */
 object PixelArtRenderer {
 
-    private const val OUTLINE = 0xFF1E293B.toInt()
-    private const val WHITE = 0xFFFFFFFF.toInt()
-    private const val CHEEK = 0xFFFB7185.toInt()
-    private const val GOLD = 0xFFFACC15.toInt()
-    private const val POOP_BROWN = 0xFF92400E.toInt()
-    private const val POOP_LIGHT = 0xFFB45309.toInt()
+    private val OUTLINE = 0xFF1E293B.toInt()
+    private val WHITE = 0xFFFFFFFF.toInt()
+    private val CHEEK = 0xFFFB7185.toInt()
+    private val GOLD = 0xFFFACC15.toInt()
+    private val POOP_BROWN = 0xFF92400E.toInt()
+    private val POOP_LIGHT = 0xFFB45309.toInt()
 
     fun renderSceneBitmap(state: PetState, widthPx: Int = 360, heightPx: Int = 180, animFrame: Int = 0): Bitmap {
         val gridW = 60
