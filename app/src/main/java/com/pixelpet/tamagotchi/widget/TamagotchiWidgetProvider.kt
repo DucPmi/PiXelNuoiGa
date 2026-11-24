@@ -29,7 +29,7 @@ class TamagotchiWidgetProvider : AppWidgetProvider() {
         val repo = PetRepository(context)
         when (intent.action) {
             ACTION_FEED -> {
-                repo.feed()
+                repo.feedBestAvailableDish()
                 updateAll(context)
             }
             ACTION_CLEAN -> {
@@ -90,17 +90,20 @@ class TamagotchiWidgetProvider : AppWidgetProvider() {
             views.setImageViewBitmap(R.id.iv_pixel_scene, sceneBitmap)
             views.setTextViewText(
                 R.id.tv_pet_header,
-                "${state.nickname} • Cấp ${state.stage}/5 (${state.stageName})"
+                "${state.nickname} • Cấp ${state.stage}/5"
             )
-            val xpText = if (state.stage >= 5) "MAX" else "XP ${state.xp}/${state.xpForNextStage}"
-            views.setTextViewText(R.id.tv_pet_xp, xpText)
+            views.setTextViewText(
+                R.id.tv_pet_timer,
+                "🪙 ${state.gold}G • ⏳ ${state.formattedEvolutionCountdown()}"
+            )
 
-            val statusSummary = if (state.isSick) {
-                "BỊ ỐM! Đói ${state.hunger}% • Sạch ${state.cleanliness}% • Nhấn Thuốc"
-            } else if (state.poopCount > 0) {
-                "Có ${state.poopCount} bãi phân! Đói ${state.hunger}% • Vui ${state.happiness}%"
-            } else {
-                "Đói ${state.hunger}% • Vui ${state.happiness}% • Ngủ ${state.energy}% • Sạch ${state.cleanliness}%"
+            val readyCrops = state.readyCropsCount()
+            val statusSummary = when {
+                state.stage == 1 -> "Trứng đang ấp • Nở sau ${state.formattedEvolutionCountdown()}"
+                state.isSick -> "BỊ ỐM! Đói ${state.hunger}% • Nhấn Thuốc ngay"
+                readyCrops > 0 -> "🌾 Có $readyCrops cây chín! • 🍰 ${state.totalDishes} bánh"
+                state.poopCount > 0 -> "Có ${state.poopCount} bãi phân! Đói ${state.hunger}% • 🍰 ${state.totalDishes}"
+                else -> "Đói ${state.hunger}% • Vui ${state.happiness}% • NL ${state.energy}% • 🍰 ${state.totalDishes}"
             }
             views.setTextViewText(R.id.tv_status_line, statusSummary)
             val sleepLabel = if (state.isSleeping) "☀️\nDậy" else "💤\nNgủ"

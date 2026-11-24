@@ -1,9 +1,6 @@
-# Pixel Pet 4x3 — Game Nuôi Thú Tamagotchi Đồ Họa Pixel
+# Pixel Pet Farm v3 — Nuôi Thú Tamagotchi × Nông Trại & Lò Bánh
 
-Ứng dụng Android nuôi thú ảo kiểu Tamagotchi cổ điển với đồ họa Pixel Art màu sắc tươi sáng và **Widget 4x3 tương tác trực tiếp ngay trên màn hình chính**.
-
-## Tính năng chính
-- **20 loài thú nuôi** (Gà Con, Mèo Mướp, Cún Corgi, Rồng Lửa, Khủng Long, Thỏ Ngọc, Cáo Lửa, Gấu Trúc, Cánh Cụt, Cá Mập Mini, Rùa Biển, Sóc Bay, Cú Mèo, Ếch Xanh, Ong Vàng, Kỳ Lân, Bạch Tuộc, Cừu Bông, Nhím Xù, Slime Sao).
-- **Mỗi loài 5 cấp tiến hóa:** Trứng → Sơ sinh → Thiếu niên → Trưởng thành → Huyền thoại (có vương miện & hào quang).
-- **Widget 4 ngang x 3 dọc tương tác trực tiếp:** Cho ăn, Dọn phân, Vui chơi, Tắt đèn đi ngủ / Đánh thức, Chữa bệnh và mở kho 20 thú ngay trên màn hình chính.
-- **Mini-game Đoán hướng cổ điển** trong app để tăng điểm vui vẻ và XP tiến hóa.
+Kết hợp nuôi thú ảo **Tamagotchi** (20 loài × 5 cấp tiến hóa theo thời gian thực, Step Rolling chọn trứng, nhạc 8-bit, Widget 4×3 tương tác trực tiếp) với vòng lặp nông trại **Stardew Valley**:
+- **Tab 🐾 Thú Nuôi:** Chăm sóc bé (Ăn bánh, Dọn phân theo đồng hồ tiêu hóa, Đi ngủ hồi năng lượng, Mini-game Đoán hướng).
+- **Tab 🌱 Nông Trại:** 6 ô đất trồng 6 loại cây (Lúa Mì, Cà Rốt, Ngô, Dâu Tây, Việt Quất, Bí Ngô); tưới nước tăng tốc 30%, tăng Farming Level mở tỷ lệ Sao Vàng x2.
+- **Tab 🍰 Lò Bánh:** Nướng 6 món (Bánh Mì, Bắp Rang Bơ, Súp Cà Rốt, Bánh Kem Dâu, Bánh Bí Ngô, Tart Hoàng Gia) để cho thú ăn hồi nhiều chỉ số hoặc bán lấy Vàng.

@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PixelTamagotchi"
+rootProject.name = "PixelPetFarm"
 include(":app")

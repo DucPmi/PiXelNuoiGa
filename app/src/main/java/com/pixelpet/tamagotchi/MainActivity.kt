@@ -8,8 +8,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.MaterialTheme
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.pixelpet.tamagotchi.audio.ChiptuneAudioEngine
 import com.pixelpet.tamagotchi.ui.PetViewModel
-import com.pixelpet.tamagotchi.ui.TamagotchiMainScreen
+import com.pixelpet.tamagotchi.ui.TamagotchiRootScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +22,18 @@ class MainActivity : ComponentActivity() {
         setContent {
             val vm: PetViewModel = viewModel()
             MaterialTheme {
-                TamagotchiMainScreen(viewModel = vm)
+                TamagotchiRootScreen(viewModel = vm)
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        ChiptuneAudioEngine.startBgm()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        ChiptuneAudioEngine.stopBgm()
     }
 }

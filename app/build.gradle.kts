@@ -12,8 +12,8 @@ android {
         applicationId = "com.pixelpet.tamagotchi"
         minSdk = 31
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 3
+        versionName = "3.0.0"
 
         vectorDrawables {
             useSupportLibrary = true
