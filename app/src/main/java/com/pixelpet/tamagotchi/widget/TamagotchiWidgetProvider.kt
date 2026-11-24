@@ -103,10 +103,8 @@ class TamagotchiWidgetProvider : AppWidgetProvider() {
                 "Đói ${state.hunger}% • Vui ${state.happiness}% • Ngủ ${state.energy}% • Sạch ${state.cleanliness}%"
             }
             views.setTextViewText(R.id.tv_status_line, statusSummary)
-            views.setTextViewText(
-                R.id.btn_sleep,
-                if (state.isSleeping) "☀️
-                if (state.isSleeping) "☀️\nDậy" else "💤\nNgủ"
+            val sleepLabel = if (state.isSleeping) "☀️\nDậy" else "💤\nNgủ"
+            views.setTextViewText(R.id.btn_sleep, sleepLabel)
 
             views.setOnClickPendingIntent(R.id.btn_feed, broadcastIntent(context, ACTION_FEED, 101))
             views.setOnClickPendingIntent(R.id.btn_clean, broadcastIntent(context, ACTION_CLEAN, 102))
